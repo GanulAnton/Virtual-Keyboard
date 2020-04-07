@@ -569,10 +569,10 @@ document.addEventListener('mousedown', (event) => {
     const s = textareaSelector.selectionStart;
     textareaSelector.value = `${textareaSelector.value.substring(0, textareaSelector.selectionStart)} ${textareaSelector.value.substring(textareaSelector.selectionEnd)}`;
     textareaSelector.selectionEnd = s + 1;
-  } else if (event.target.classList.contains('Delete')) {
+  } else if (event.target.classList.contains('Del')) {
     const s = textareaSelector.selectionStart;
     textareaSelector.value = `${textareaSelector.value.substring(0, textareaSelector.selectionStart)}${textareaSelector.value.substring(textareaSelector.selectionEnd + 1)}`;
-    textareaSelector.selectionEnd = s - 1;
+    textareaSelector.selectionEnd = s;
   } else if (event.target.classList.contains('Backspace')) {
     const start = textareaSelector.selectionStart;
     textareaSelector.value = textareaSelector.value.substring(0, textareaSelector.selectionStart - 1) + textareaSelector.value.substring(textareaSelector.selectionEnd);
